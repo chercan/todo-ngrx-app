@@ -9,9 +9,18 @@ import { TodoPageComponent } from './todo-page/todo-page.component';
 
 
 @NgModule({
-  declarations: [TodoAddComponent, TodoFooterComponent, TodoItemComponent, TodoListComponent, TodoPageComponent],
+  declarations: [
+    TodoAddComponent,
+    TodoFooterComponent,
+    TodoItemComponent,
+    TodoListComponent,
+    TodoPageComponent
+  ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    TodoPageComponent
   ]
 })
 export class TodoModule { }
