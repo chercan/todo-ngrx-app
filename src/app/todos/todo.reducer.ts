@@ -4,7 +4,10 @@ import { Todo } from './models/todo.mode.';
 import * as actions from './todo.actions'
 
 const initialState: Todo[] = [
-    new Todo('Salva al mundo')
+    new Todo('Salva al mundo'),
+    new Todo('Destruir al mundo'),
+    new Todo('Buscarl al mundo'),
+    new Todo('Ver al mundo'),
 ];
 
 const reducer = createReducer(initialState,
