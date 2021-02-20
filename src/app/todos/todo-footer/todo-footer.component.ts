@@ -30,7 +30,6 @@ export class TodoFooterComponent implements OnInit {
   }
 
   limpiarCompletados() {
-    if (this.pendientes) { return }
     this.store.dispatch(eliminarListos())
   }
 
