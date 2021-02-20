@@ -44,7 +44,8 @@ const reducer = createReducer(initialState,
                 completado: completado
             }
         })
-    })
+    }),
+    on(actions.eliminarListos, state => state.filter(({ completado }) => !completado))
 );
 
 export const todoReducer = (state, action) => {

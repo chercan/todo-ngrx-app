@@ -24,3 +24,7 @@ export const toggleAll = createAction(
     '[ToDo] seleccionar todo',
     props<{ completado: boolean }>()
 )
+
+export const eliminarListos = createAction(
+    '[ToDo] eliminar listos'
+)

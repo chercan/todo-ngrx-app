@@ -18,10 +18,6 @@ export class TodoListComponent implements OnInit {
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-
-    // this.store.select('todos').subscribe(resTodos => {
-    //   this.todos = resTodos;
-    // })
     this.store.subscribe(({ todos, filtro }) => {
       this.todos = todos
       this.filtroActual = filtro

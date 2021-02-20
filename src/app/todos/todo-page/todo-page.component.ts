@@ -21,7 +21,6 @@ export class TodoPageComponent implements OnInit {
   marcarTodos() {
     this.marcados = !this.marcados
     this.store.dispatch(actions.toggleAll({ completado: this.marcados }))
-    console.log(this.marcados)
   }
 
 }
