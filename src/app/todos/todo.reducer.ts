@@ -23,6 +23,18 @@ const reducer = createReducer(initialState,
                 return todo
             }
         })
+    }),
+    on(actions.editar, (state, { id, texto }) => {
+        return state.map(todo => {
+            if (todo.id === id ) {
+                return {
+                    ...todo,
+                    texto: texto
+                }
+            } else {
+                return todo
+            }
+        })
     })
 );
 
