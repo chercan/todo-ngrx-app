@@ -26,7 +26,7 @@ const reducer = createReducer(initialState,
     }),
     on(actions.editar, (state, { id, texto }) => {
         return state.map(todo => {
-            if (todo.id === id ) {
+            if (todo.id === id) {
                 return {
                     ...todo,
                     texto: texto
@@ -35,7 +35,8 @@ const reducer = createReducer(initialState,
                 return todo
             }
         })
-    })
+    }),
+    on(actions.borrar, (state, { id }) => state.filter(todo => todo.id != id))
 );
 
 export const todoReducer = (state, action) => {
